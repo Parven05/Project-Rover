@@ -6923,7 +6923,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &836881753
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6940,8 +6940,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -3.3950195, y: 5.8792114}
+  m_SizeDelta: {x: 161.8081, y: 108.8843}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &836881754
 Animator:
@@ -7897,7 +7897,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4459864850019384738, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -2.47
       objectReference: {fileID: 0}
     - target: {fileID: 4459864850019384738, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: m_LocalRotation.w
@@ -30143,7 +30143,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   EffectFlags:
     components: []
-  sharedInstanceID: 1c44d1e3-f625-4aa1-acb0-a6490913f4bf
+  sharedInstanceID: 09a9bd80-1146-403c-8a92-968893ea8971
 --- !u!4 &9097203903834666482
 Transform:
   m_ObjectHideFlags: 0
