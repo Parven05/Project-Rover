@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class RoverController : MonoBehaviour
@@ -26,27 +27,49 @@ public class RoverController : MonoBehaviour
     [SerializeField] private Transform rearLeftWheelTransform;
     [SerializeField] private Transform rearRightWheelTransform;
 
+    private Rigidbody rb;
 
-    private bool isMoving = false;
-    private bool canMove = true;
-
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
 
     private void FixedUpdate()
     {
         GetInput();
         HandleMotor();
         HandleSteering();
-        HandleHandBrake();
         UpdateWheels();
+
+        if (isBreaking || HasNoInput())
+        {
+            ApplyBrake();
+        }
+        else
+        {
+            ReleaseBreak();
+        }
     }
 
-
-    private void HandleHandBrake()
+    private void ReleaseBreak()
     {
-        frontRightWheelCollider.brakeTorque = isBreaking ? Mathf.Infinity : 0;
-        frontLeftWheelCollider.brakeTorque = isBreaking ? Mathf.Infinity : 0;
-        rearLeftWheelCollider.brakeTorque = isBreaking ? Mathf.Infinity : 0;
-        rearRightWheelCollider.brakeTorque = isBreaking ? Mathf.Infinity : 0;
+        frontRightWheelCollider.brakeTorque = 0;
+        frontLeftWheelCollider.brakeTorque = 0;
+        rearLeftWheelCollider.brakeTorque = 0;
+        rearRightWheelCollider.brakeTorque = 0;
+    }
+
+    private bool HasNoInput()
+    {
+        return verticalInput == 0 && horizontalInput == 0;
+    }
+
+    private void ApplyBrake()
+    {
+        frontRightWheelCollider.brakeTorque = Mathf.Infinity;
+        frontLeftWheelCollider.brakeTorque = Mathf.Infinity;
+        rearLeftWheelCollider.brakeTorque = Mathf.Infinity;
+        rearRightWheelCollider.brakeTorque = Mathf.Infinity;
     }
 
     private void GetInput()
@@ -55,8 +78,6 @@ public class RoverController : MonoBehaviour
         verticalInput = Input.GetAxis(VERTICAL);
 
         isBreaking = Input.GetKey(KeyCode.Space);
-
-        isMoving = horizontalInput != 0 || verticalInput != 0;
     }
 
     private void HandleMotor()
@@ -65,31 +86,13 @@ public class RoverController : MonoBehaviour
         frontRightWheelCollider.motorTorque = verticalInput * motorForce;
     }
 
+
     private void HandleSteering()
     {
         currentSteerAngle = maxSteerAngle * horizontalInput;
         frontLeftWheelCollider.steerAngle = currentSteerAngle;
         frontRightWheelCollider.steerAngle = currentSteerAngle;
     }
-
-    private void ApplyBreaking()
-    {
-        if (!canMove) // Stop instantly if the truck can't move
-        {
-            frontRightWheelCollider.brakeTorque = Mathf.Infinity;
-            frontLeftWheelCollider.brakeTorque = Mathf.Infinity;
-            rearLeftWheelCollider.brakeTorque = Mathf.Infinity;
-            rearRightWheelCollider.brakeTorque = Mathf.Infinity;
-        }
-        else // Apply regular braking force
-        {
-            frontRightWheelCollider.brakeTorque = currentbreakForce;
-            frontLeftWheelCollider.brakeTorque = currentbreakForce;
-            rearLeftWheelCollider.brakeTorque = currentbreakForce;
-            rearRightWheelCollider.brakeTorque = currentbreakForce;
-        }
-    }
-
 
     private void UpdateWheels()
     {
@@ -107,5 +110,19 @@ public class RoverController : MonoBehaviour
         wheelTransform.rotation = rot;
         wheelTransform.position = pos;
     }
+
+    public bool IsRoverMoving()
+    {
+        return IsWheelMoving(frontLeftWheelCollider) ||
+               IsWheelMoving(frontRightWheelCollider) ||
+               IsWheelMoving(rearLeftWheelCollider) ||
+               IsWheelMoving(rearRightWheelCollider);
+    }
+
+    private bool IsWheelMoving(WheelCollider wheelCollider)
+    {
+        return Mathf.Abs(wheelCollider.rpm) > 0.1f;
+    }
+
 
 }
