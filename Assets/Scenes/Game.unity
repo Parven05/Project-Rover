@@ -12230,6 +12230,7 @@ MonoBehaviour:
   - {fileID: 1784395278}
   - {fileID: 146635596}
   soloarPowerDecreaseSpeed: 1
+  soloarPowerIncreaseSpeed: 0.3
 --- !u!43 &1517126362
 Mesh:
   m_ObjectHideFlags: 0

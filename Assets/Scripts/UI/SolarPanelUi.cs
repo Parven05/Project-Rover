@@ -7,6 +7,8 @@ public class SolarPanelUi : MonoBehaviour
 {
     [SerializeField] private List<Image> solarBarImageList;
     [SerializeField] private float soloarPowerDecreaseSpeed = 2f;
+    [SerializeField] private float soloarPowerIncreaseSpeed = 2f;
+
     [Space]
     private float currentSolorPower;
     private const float solarPowerMax = 100;
@@ -31,7 +33,12 @@ public class SolarPanelUi : MonoBehaviour
         {
             currentSolorPower -= Time.deltaTime * soloarPowerDecreaseSpeed;
         }
+        else
+        {
+            currentSolorPower += Time.deltaTime * soloarPowerIncreaseSpeed;
+        }
 
+        currentSolorPower = Mathf.Clamp(currentSolorPower, 0, solarPowerMax);
         HandleSolarBarUi();
     }
 
