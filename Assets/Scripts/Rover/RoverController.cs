@@ -96,19 +96,24 @@ public class RoverController : MonoBehaviour
 
     private void UpdateWheels()
     {
-        UpdateSingleWheel(frontLeftWheelCollider, frontLeftWheelTransform);
-        UpdateSingleWheel(frontRightWheelCollider, frontRightWheeTransform);
+        UpdateSingleWheel(frontLeftWheelCollider /*,frontLeftWheelTransform*/);  // no need To Expose Roatation
+        UpdateSingleWheel(frontRightWheelCollider /*,frontRightWheeTransform*/); // no need To Expose Roatation
         UpdateSingleWheel(rearRightWheelCollider, rearRightWheelTransform);
         UpdateSingleWheel(rearLeftWheelCollider, rearLeftWheelTransform);
     }
 
-    private void UpdateSingleWheel(WheelCollider wheelCollider, Transform wheelTransform)
+    private void UpdateSingleWheel(WheelCollider wheelCollider, Transform wheelTransform = null)
     {
         Vector3 pos;
         Quaternion rot;
         wheelCollider.GetWorldPose(out pos, out rot);
-        wheelTransform.rotation = rot;
-        wheelTransform.position = pos;
+
+        if(wheelTransform != null)
+        {
+            wheelTransform.rotation = rot;
+            wheelTransform.position = pos;
+        }
+       
     }
 
     public bool IsRoverMoving()
