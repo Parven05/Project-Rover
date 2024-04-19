@@ -3023,7 +3023,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   EffectFlags:
     components: []
-  sharedInstanceID: e1503e0e-cbb6-40c2-92f5-5263af873cf6
+  sharedInstanceID: 8e4d6b7b-3f54-4e52-b3d2-b682546b63cf
 --- !u!1001 &1528539650
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -9,6 +9,9 @@ public class WheelMovement : MonoBehaviour
 
     private Rigidbody rb;
 
+    private float moveHorizontal;
+    private float moveVertical;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -19,14 +22,23 @@ public class WheelMovement : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+       moveHorizontal = Input.GetAxis("Horizontal");
+       moveVertical = Input.GetAxis("Vertical");
+    }
+
     void FixedUpdate()
     {
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
-
         Vector3 moveDirection = new Vector3(moveHorizontal, 0.0f, moveVertical).normalized;
 
         rb.AddForce(moveDirection * moveSpeed, ForceMode.Acceleration);
+
+        // If No Input From Player Means Stop Rover
+        if(moveDirection.x == 0 && moveDirection.z == 0)
+        {
+            rb.velocity = Vector3.zero;
+        }
 
         if (head != null)
         {
