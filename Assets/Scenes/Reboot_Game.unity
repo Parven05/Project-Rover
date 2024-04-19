@@ -1710,6 +1710,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 8
+  stopDelay: 5
   head: {fileID: 1940606609}
 --- !u!54 &975519773
 Rigidbody:
@@ -2811,6 +2812,7 @@ GameObject:
   - component: {fileID: 1527130342}
   - component: {fileID: 1527130343}
   - component: {fileID: 1527130344}
+  - component: {fileID: 1527130345}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -3023,7 +3025,22 @@ MonoBehaviour:
     m_Bits: 4294967295
   EffectFlags:
     components: []
-  sharedInstanceID: 8e4d6b7b-3f54-4e52-b3d2-b682546b63cf
+  sharedInstanceID: 3ffa6c33-0215-4baa-9029-f83ecf717713
+--- !u!114 &1527130345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527130338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0af5e6a9ed5e85941a85c7e8ca7440bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetObject: {fileID: 975519768}
+  targetObjectRotation: {fileID: 0}
+  offset: {x: 0.61, y: 0.78, z: -6.26}
 --- !u!1001 &1528539650
 PrefabInstance:
   m_ObjectHideFlags: 0

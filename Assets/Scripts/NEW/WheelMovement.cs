@@ -3,8 +3,9 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class WheelMovement : MonoBehaviour
 {
-    public float moveSpeed = 5.0f;
-    public GameObject head;
+    [SerializeField] private float moveSpeed = 5.0f;
+    [SerializeField] private float stopDelay = 5.0f;
+    [SerializeField] private GameObject head;
     private Vector3 headOffset;
 
     private Rigidbody rb;
@@ -37,7 +38,7 @@ public class WheelMovement : MonoBehaviour
         // If No Input From Player Means Stop Rover
         if(moveDirection.x == 0 && moveDirection.z == 0)
         {
-            rb.velocity = Vector3.zero;
+            rb.velocity = Vector3.Lerp(rb.velocity,Vector3.zero,stopDelay);
         }
 
         if (head != null)
