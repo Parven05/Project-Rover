@@ -7,6 +7,7 @@ public class HeadRotation : MonoBehaviour
     void Update()
     {
         float mouseX = Input.GetAxis("Mouse X");
+        //Should Clamp 
         transform.Rotate(Vector3.up, mouseX * horizontalRotationSpeed * Time.deltaTime);
     }
 }

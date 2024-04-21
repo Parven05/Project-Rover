@@ -1,3 +1,4 @@
+using StarterAssets;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,7 +16,7 @@ public class SolarPanelUi : MonoBehaviour
     private float perBatteryPercentage;
     private bool isRoverMoving = false;
 
-    [SerializeField] private WheelMovement roverWheel;
+    [SerializeField] private ThirdPersonController tpController;
     [SerializeField] private ChargeMode chargeMode;
     public enum ChargeMode { AutoCharge,ManualStation }
     private void Awake()
@@ -26,7 +27,7 @@ public class SolarPanelUi : MonoBehaviour
 
     private void Update()
     {
-        if(roverWheel) isRoverMoving = roverWheel.IsRoverMoving();
+        if(tpController) isRoverMoving = tpController.IsRoverMoving();
 
         if(isRoverMoving)
         {

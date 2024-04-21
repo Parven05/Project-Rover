@@ -1,47 +1,79 @@
+using StarterAssets;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class CameraMovement : MonoBehaviour
 {
-    [SerializeField] private float mouseSensitivityX;
-    [SerializeField] private float mouseSensitivityY;
+    [SerializeField] private StarterAssetsInputs _input;
 
-    private float rotationX = 0f;
-    private float rotationY = 0f;
-    void Update()
-   {
-        float mouseX = Input.GetAxis("Mouse X");
-        float mouseY = Input.GetAxis("Mouse Y");
+#if ENABLE_INPUT_SYSTEM
+    [SerializeField] private PlayerInput _playerInput;
+#endif
 
-        //transform.Rotate(Vector3.up, mouseX * mouseSensitivityX * Time.deltaTime);
-        //transform.Rotate(Vector3.left, mouseY * mouseSensitivityY * Time.deltaTime);
+    [Tooltip("How far in degrees can you move the camera up")]
+    public float TopClamp = 70.0f;
 
-        rotationX -= mouseY * mouseSensitivityY;
-        rotationY -= mouseX * mouseSensitivityX;
+    [Tooltip("How far in degrees can you move the camera down")]
+    public float BottomClamp = -30.0f;
 
-        transform.localEulerAngles = new Vector3(Mathf.Clamp(-rotationX,-90,90) , Mathf.Clamp(rotationY, -90, 90), 0f);
-   }
+    [Tooltip("Additional degress to override the camera. Useful for fine tuning camera position when locked")]
+    public float CameraAngleOverride = 0.0f;
+
+    [Tooltip("For locking the camera position on all axis")]
+    public bool LockCameraPosition = false;
+
+    [Header("Cinemachine")]
+    [Tooltip("The follow target set in the Cinemachine Virtual Camera that the camera will follow")]
+    public GameObject CinemachineCameraTarget;
+
+    private const float _threshold = 0.01f;
+
+    // cinemachine
+    private float _cinemachineTargetYaw;
+    private float _cinemachineTargetPitch;
+
+    private bool IsCurrentDeviceMouse
+    {
+        get
+        {
+#if ENABLE_INPUT_SYSTEM
+            return _playerInput.currentControlScheme == "KeyboardMouse";
+#else
+				return false;
+#endif
+        }
+    }
+
+    private void LateUpdate()
+    {
+        CameraRotation();
+    }
+
+    private void CameraRotation()
+    {
+        // if there is an input and camera position is not fixed
+        if (_input.look.sqrMagnitude >= _threshold && !LockCameraPosition)
+        {
+            //Don't multiply mouse input by Time.deltaTime;
+            float deltaTimeMultiplier = IsCurrentDeviceMouse ? 1.0f : Time.deltaTime;
+
+            _cinemachineTargetYaw += _input.look.x * deltaTimeMultiplier;
+            _cinemachineTargetPitch += _input.look.y * deltaTimeMultiplier;
+        }
+
+        // clamp our rotations so our values are limited 360 degrees
+        _cinemachineTargetYaw = ClampAngle(_cinemachineTargetYaw, float.MinValue, float.MaxValue);
+        _cinemachineTargetPitch = ClampAngle(_cinemachineTargetPitch, BottomClamp, TopClamp);
+
+        // Cinemachine will follow this target
+        CinemachineCameraTarget.transform.rotation = Quaternion.Euler(_cinemachineTargetPitch + CameraAngleOverride,
+            _cinemachineTargetYaw, 0.0f);
+    }
+
+    private static float ClampAngle(float lfAngle, float lfMin, float lfMax)
+    {
+        if (lfAngle < -360f) lfAngle += 360f;
+        if (lfAngle > 360f) lfAngle -= 360f;
+        return Mathf.Clamp(lfAngle, lfMin, lfMax);
+    }
 }
-//using UnityEngine;
-
-//public class CameraMovement : MonoBehaviour
-//{
-//    [SerializeField] private float mouseSensitivityX = 2f;
-//    [SerializeField] private float mouseSensitivityY = 2f;
-//    private float rotationX = 0f;
-
-//    void Update()
-//    {
-//        float mouseX = Input.GetAxis("Mouse X");
-//        float mouseY = Input.GetAxis("Mouse Y");
-
-//        // Rotate around the y-axis (left and right)
-//        transform.Rotate(Vector3.up, mouseX * mouseSensitivityX * Time.deltaTime);
-
-//        // Calculate rotation around the x-axis (up and down)
-//        rotationX -= mouseY * mouseSensitivityY;
-//        rotationX = Mathf.Clamp(rotationX, -90f, 90f);
-
-//        // Apply rotation around the x-axis
-//        transform.localRotation = Quaternion.Euler(rotationX, transform.localRotation.eulerAngles.y, 0f);
-//    }
-//}
