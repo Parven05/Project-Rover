@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -16,18 +15,18 @@ public class SolarPanelUi : MonoBehaviour
     private float perBatteryPercentage;
     private bool isRoverMoving = false;
 
-    private RoverController roverController;
-
+    [SerializeField] private WheelMovement roverWheel;
+    [SerializeField] private ChargeMode chargeMode;
+    public enum ChargeMode { AutoCharge,ManualStation }
     private void Awake()
     {
-        roverController = FindObjectOfType<RoverController>();
         currentSolorPower = solarPowerMax;
         perBatteryPercentage = solarPowerMax / solarBarImageList.Count;
     }
 
     private void Update()
     {
-        isRoverMoving = roverController.IsRoverMoving();
+        if(roverWheel) isRoverMoving = roverWheel.IsRoverMoving();
 
         if(isRoverMoving)
         {
@@ -35,6 +34,7 @@ public class SolarPanelUi : MonoBehaviour
         }
         else
         {
+            if(chargeMode == ChargeMode.AutoCharge)
             currentSolorPower += Time.deltaTime * soloarPowerIncreaseSpeed;
         }
 

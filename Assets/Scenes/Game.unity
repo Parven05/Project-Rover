@@ -1864,6 +1864,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetObject: {fileID: 3893294199867556402}
+  targetObjectRotation: {fileID: 0}
   offset: {x: 0, y: 1, z: 0}
 --- !u!1 &217094147
 GameObject:
@@ -26641,7 +26642,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   EffectFlags:
     components: []
-  sharedInstanceID: d473b325-d80f-411e-a091-5abbb5c35591
+  sharedInstanceID: afdedbdb-e6db-4bd1-bd94-d600fc36e21d
 --- !u!4 &9097203903834666482
 Transform:
   m_ObjectHideFlags: 0

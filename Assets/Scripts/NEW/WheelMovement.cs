@@ -13,6 +13,7 @@ public class WheelMovement : MonoBehaviour
     private float moveHorizontal;
     private float moveVertical;
 
+    private Vector3 minVelocity = new(0.5f, 0.5f, 0.5f);
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -25,8 +26,10 @@ public class WheelMovement : MonoBehaviour
 
     private void Update()
     {
-       moveHorizontal = Input.GetAxis("Horizontal");
-       moveVertical = Input.GetAxis("Vertical");
+        moveHorizontal = Input.GetAxis("Horizontal");
+        moveVertical = Input.GetAxis("Vertical");
+
+        //Debug.Log(rb.velocity);
     }
 
     void FixedUpdate()
@@ -46,5 +49,10 @@ public class WheelMovement : MonoBehaviour
             Vector3 targetHeadPosition = transform.position + headOffset;
             head.transform.position = Vector3.Lerp(head.transform.position, targetHeadPosition, Time.deltaTime * moveSpeed);
         }
+    }
+
+    public bool IsRoverMoving()
+    {
+        return rb.velocity.x > minVelocity.x || rb.velocity.y > minVelocity.y || rb.velocity.z > minVelocity.z;
     }
 }
