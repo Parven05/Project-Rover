@@ -5,6 +5,7 @@ public class LookAtCamera : MonoBehaviour
     public enum LookMode { LookAt,LookAtInverted,CameraForward,CameraForwardInverted }
 
     [SerializeField] private LookMode lookMode;
+    [SerializeField] private Transform targetToLookTransform;
 
     private Canvas canvas;
 
@@ -18,17 +19,17 @@ public class LookAtCamera : MonoBehaviour
         switch(lookMode)
         {
             case LookMode.LookAt:
-                transform.LookAt(Camera.main.transform);
+                transform.LookAt(targetToLookTransform);
                 break;
             case LookMode.LookAtInverted:
-                Vector3 dir = transform.position - Camera.main.transform.position;
+                Vector3 dir = transform.position - targetToLookTransform.position;
                 transform.LookAt(transform.position + dir);
                 break;
             case LookMode.CameraForward:
-                transform.forward = Camera.main.transform.forward;
+                transform.forward = targetToLookTransform.forward;
                 break;
             case LookMode.CameraForwardInverted:
-                transform.forward = -Camera.main.transform.forward;
+                transform.forward = -targetToLookTransform.forward;
                 break;
         }
     }
