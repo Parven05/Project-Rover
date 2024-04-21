@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d075912f0f293ac44af45261a171c400, type: 3}
   m_Name: Troilite
   m_EditorClassIdentifier: 
-  mineralName: Dysposium
-  mineralChallenge: 
-  mineralLore: 
-  mineralColor: 0
-  mineralWeight: 0
-  mineralSize: 0
+  mineralName: Troilite
+  mineralChallenge: Consumer more energy, reduce movement
+  mineralLore: Heaviest mineral in the planet
+  mineralColor: 4
+  mineralWeight: 2
+  mineralSize: 2
   mineralSprite: {fileID: 0}
   mineralPrefab: {fileID: 0}

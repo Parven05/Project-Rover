@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mineralName: Samerium
   mineralChallenge: It increases battery bar temporarily
-  mineralLore: 
+  mineralLore: A divine Ore
   mineralColor: 1
   mineralWeight: 0
   mineralSize: 0

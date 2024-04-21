@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d075912f0f293ac44af45261a171c400, type: 3}
   m_Name: Limenite
   m_EditorClassIdentifier: 
-  mineralName: Dysposium
-  mineralChallenge: 
-  mineralLore: 
-  mineralColor: 0
-  mineralWeight: 0
-  mineralSize: 0
+  mineralName: Limenite
+  mineralChallenge: Hide the battery UI temporarily
+  mineralLore: Radiant ore cause malfunciton nearby devices
+  mineralColor: 2
+  mineralWeight: 1
+  mineralSize: 1
   mineralSprite: {fileID: 0}
   mineralPrefab: {fileID: 0}
