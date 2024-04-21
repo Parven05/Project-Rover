@@ -10190,6 +10190,8 @@ MonoBehaviour:
   - {fileID: 146635596}
   soloarPowerDecreaseSpeed: 1
   soloarPowerIncreaseSpeed: 0.3
+  roverWheel: {fileID: 0}
+  chargeMode: 0
 --- !u!1 &1548095497
 GameObject:
   m_ObjectHideFlags: 0
