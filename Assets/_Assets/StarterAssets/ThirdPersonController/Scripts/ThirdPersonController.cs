@@ -395,5 +395,9 @@ namespace StarterAssets
             return _controller.velocity.magnitude > 0.5f;
         }
 
+        public Vector3 GetMoveVelocity()
+        {
+           return _controller.velocity;
+        }
     }
 }
