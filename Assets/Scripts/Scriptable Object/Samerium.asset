@@ -20,3 +20,4 @@ MonoBehaviour:
   mineralSize: 0
   mineralSprite: {fileID: 0}
   mineralPrefab: {fileID: 0}
+  mineralPickParticle: {fileID: 7226888052703040407, guid: 7ec363c8df426644ea85f8d6d570561c, type: 3}

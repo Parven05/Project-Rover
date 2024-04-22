@@ -3,12 +3,19 @@ using UnityEngine;
 
 public class MineralsFxManager : MonoBehaviour
 {
+    public static MineralsFxManager Instance {  get; private set; }
+
     [SerializeField] private Transform playerTransform;
 
     [SerializeField] private List<Mineral> minerals;
 
     [SerializeField] private float dustIndigationDistance = 5f;
     [SerializeField] private float gloomIndigationDistance = 10f;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     private void Update()
     {
@@ -32,5 +39,10 @@ public class MineralsFxManager : MonoBehaviour
                 mineral.SetActiveGloomParticles(false);
             }
         }
+    }
+
+    public void RemoveMineral(Mineral mineral)
+    {
+        minerals.Remove(mineral);
     }
 }
