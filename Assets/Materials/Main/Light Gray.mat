@@ -123,16 +123,16 @@ Material:
     - _Lighting: 1
     - _MainTexturesSettings: 1
     - _Metallic: 0
-    - _MetallicStrength: 1
+    - _MetallicStrength: 0
     - _Mode: 0
     - _NormalStrength: 1
     - _OcclusionStrength: 1
     - _Outline: 1
     - _OutlineMaskAlphaClip: 0.5
-    - _OutlineSize: 0.1
+    - _OutlineSize: 1
     - _Parallax: 0.02
     - _PointSpotLightBoost: 10
-    - _SmoothnessStrength: 1
+    - _SmoothnessStrength: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
