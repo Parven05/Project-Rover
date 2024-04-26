@@ -29,7 +29,7 @@ Material:
   - _ZTEST_LESSEQUAL
   - _ZWRITE_ON
   m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
+  m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -55,7 +55,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 2800000, guid: 35317988f0009b64a9a0474504802344, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6eb0554c83b69bd4992bb32e423e51a3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -109,7 +109,7 @@ Material:
     - _DepthOffsetUnits: 0
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _EmissionMultiplier: 1
+    - _EmissionMultiplier: 3
     - _GlossMapScale: 1
     - _Glossiness: 0
     - _GlossyReflections: 1
