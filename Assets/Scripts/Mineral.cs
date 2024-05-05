@@ -25,6 +25,7 @@ public class Mineral : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        Debug.Log(collision.gameObject.name);   
         if (collision.gameObject.TryGetComponent(out ThirdPersonController _))
         {
             Transform pickEffect = Instantiate(mineralDataSO.mineralPickParticle, transform).transform;
@@ -35,7 +36,7 @@ public class Mineral : MonoBehaviour
 
             MineralsFxManager.Instance.RemoveMineral(this);
 
-            Destroy(gameObject, 1f);
+            Destroy(gameObject, mineralDataSO.pickUpDestroyDelay);
         }
     }
 }

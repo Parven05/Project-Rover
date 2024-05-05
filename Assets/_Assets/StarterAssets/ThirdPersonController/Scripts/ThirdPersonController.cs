@@ -392,7 +392,7 @@ namespace StarterAssets
         public bool IsRoverMoving()
         {
             // Check if the magnitude of the velocity vector is greater than a threshold
-            return _controller.velocity.magnitude > 0.5f;
+            return _controller.velocity.magnitude > 0.5f && _input.move.magnitude > 0.1f;
         }
 
         public Vector3 GetMoveVelocity()
