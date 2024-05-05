@@ -31,16 +31,27 @@ public class SolarPanelUi : MonoBehaviour
 
         if(isRoverMoving)
         {
-            currentSolorPower -= Time.deltaTime * soloarPowerDecreaseSpeed;
+            RemovePower(Time.deltaTime * soloarPowerDecreaseSpeed);
         }
         else
         {
-            if(chargeMode == ChargeMode.AutoCharge)
-            currentSolorPower += Time.deltaTime * soloarPowerIncreaseSpeed;
+            if (chargeMode == ChargeMode.AutoCharge)
+                AddPower(Time.deltaTime * soloarPowerDecreaseSpeed);
         }
 
-        currentSolorPower = Mathf.Clamp(currentSolorPower, 0, solarPowerMax);
         HandleSolarBarUi();
+    }
+
+    public void AddPower(float amount)
+    {
+        currentSolorPower += amount;
+        currentSolorPower = Mathf.Clamp(currentSolorPower, 0, solarPowerMax);
+    }
+
+    private void RemovePower(float amount)
+    {
+        currentSolorPower -= amount;
+        currentSolorPower = Mathf.Clamp(currentSolorPower, 0, solarPowerMax);
     }
 
     private void HandleSolarBarUi()
