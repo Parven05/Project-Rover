@@ -7,7 +7,8 @@ public class Mineral : MonoBehaviour
 
     [SerializeField] private GameObject dustParticleGo;
     [SerializeField] private GameObject gloomParticleGo;
-
+    [SerializeField] private ParticleSystem pickUpParticleEffect;
+    [SerializeField] private float mineralDestroyDelay = 1f;
     public void SetActiveDustParticles(bool active)
     {
         dustParticleGo.SetActive(active);
@@ -20,24 +21,20 @@ public class Mineral : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-       
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
         //Debug.Log(collision.gameObject.name);   
-        if (collision.gameObject.TryGetComponent(out ThirdPersonController _))
+        if (other.gameObject.TryGetComponent(out ThirdPersonController _))
         {
-            Transform pickEffect = Instantiate(mineralDataSO.mineralPickParticle, transform).transform;
-            pickEffect.transform.localPosition = Vector3.zero;
-
-            ParticleSystem particleSystem = pickEffect.GetComponent<ParticleSystem>();
-            particleSystem.Play();
+            pickUpParticleEffect.Play();
 
             MineralsFxManager.Instance.RemoveMineral(this);
 
-            Destroy(gameObject, mineralDataSO.pickUpDestroyDelay);
+            Destroy(gameObject, mineralDestroyDelay);
         }
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        
     }
 }
 

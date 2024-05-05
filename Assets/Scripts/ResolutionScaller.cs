@@ -12,10 +12,10 @@ public class ResolutionScaller : MonoBehaviour
     {
         Resolution[] resolutions = Screen.resolutions;
 
-        foreach (Resolution resolution in resolutions)
-        {
-            Debug.Log($"{resolution.width} X {resolution.height} RefreshRate {resolution.refreshRateRatio}");
-        }
+        //foreach (Resolution resolution in resolutions)
+        //{
+        //    Debug.Log($"{resolution.width} X {resolution.height} RefreshRate {resolution.refreshRateRatio}");
+        //}
 
         //minResolution = new Vector2(resolutions[0].width, resolutions[0].height);
         minResolution = new Vector2(resolutions[(resolutions.Length / 2) - 1].width, resolutions[(resolutions.Length / 2) - 1].height);

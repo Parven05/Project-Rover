@@ -69,7 +69,7 @@ public class HeadVisual : MonoBehaviour
         // Lean the head when the rover is moving
         float targetLeanAngle = Mathf.Clamp(leanAngle, -45f, 45f); // Clamp the lean angle for safety
         Vector3 targetRotation = new Vector3(targetLeanAngle, originalLocalRotation.y, originalLocalRotation.z);
-        transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.Euler(targetRotation), Time.deltaTime * headLeanForce);
+        transform.localRotation = Quaternion.Slerp(transform.localRotation, Quaternion.Euler(targetRotation), Time.deltaTime * headLeanForce);
 
         if (coroutine == null)
         {

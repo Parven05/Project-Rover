@@ -10606,6 +10606,8 @@ MonoBehaviour:
   mineralDataSO: {fileID: 11400000, guid: 734432fae24e2a74db5973ccd8236322, type: 2}
   dustParticleGo: {fileID: 1143643414}
   gloomParticleGo: {fileID: 938348660}
+  pickUpParticleEffect: {fileID: 0}
+  mineralDestroyDelay: 1
 --- !u!54 &619399504
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11306,6 +11308,8 @@ MonoBehaviour:
   mineralDataSO: {fileID: 11400000, guid: d3615ad38fff6cb4899a46680b10d4a4, type: 2}
   dustParticleGo: {fileID: 2002751053}
   gloomParticleGo: {fileID: 273376618}
+  pickUpParticleEffect: {fileID: 1228388709}
+  mineralDestroyDelay: 1
 --- !u!4 &713210672 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2322950120243684502, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
@@ -11326,7 +11330,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -11354,8 +11358,8 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -12107,6 +12111,7 @@ GameObject:
   - component: {fileID: 844338638}
   - component: {fileID: 844338637}
   - component: {fileID: 844338644}
+  - component: {fileID: 844338645}
   m_Layer: 8
   m_Name: Rover
   m_TagString: Player
@@ -12359,6 +12364,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e89a566515d190949b3da33aad486d98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &844338645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 844338636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904230811f51b0c47b7edfd8b4545340, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickedMineral: {fileID: 0}
 --- !u!1001 &844987124
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14002,6 +14020,8 @@ MonoBehaviour:
   mineralDataSO: {fileID: 11400000, guid: c33d25097aab2084789955048298a110, type: 2}
   dustParticleGo: {fileID: 384321789}
   gloomParticleGo: {fileID: 189084765}
+  pickUpParticleEffect: {fileID: 0}
+  mineralDestroyDelay: 1
 --- !u!65 &1075288812
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14147,6 +14167,7 @@ Transform:
   m_Children:
   - {fileID: 1222006141}
   - {fileID: 1574822150}
+  - {fileID: 1228388710}
   m_Father: {fileID: 2083437902}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1128908508
@@ -15223,6 +15244,122 @@ MonoBehaviour:
   headLeanForce: 5
   returDelay: 0.25
   thirdPersonController: {fileID: 844338641}
+--- !u!1001 &1228388708
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1107612401}
+    m_Modifications:
+    - target: {fileID: 1040608886635896, guid: a97415c6b57076f41a6621a7b51d63a3, type: 3}
+      propertyPath: m_Name
+      value: CFX2_RockHit
+      objectReference: {fileID: 0}
+    - target: {fileID: 4865807609286998, guid: a97415c6b57076f41a6621a7b51d63a3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4865807609286998, guid: a97415c6b57076f41a6621a7b51d63a3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 4865807609286998, guid: a97415c6b57076f41a6621a7b51d63a3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 4865807609286998, guid: a97415c6b57076f41a6621a7b51d63a3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4865807609286998, guid: a97415c6b57076f41a6621a7b51d63a3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4865807609286998, guid: a97415c6b57076f41a6621a7b51d63a3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4865807609286998, guid: a97415c6b57076f41a6621a7b51d63a3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4865807609286998, guid: a97415c6b57076f41a6621a7b51d63a3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4865807609286998, guid: a97415c6b57076f41a6621a7b51d63a3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4865807609286998, guid: a97415c6b57076f41a6621a7b51d63a3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198330214428362902, guid: a97415c6b57076f41a6621a7b51d63a3, type: 3}
+      propertyPath: lengthInSec
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198330214428362902, guid: a97415c6b57076f41a6621a7b51d63a3, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198330214428362902, guid: a97415c6b57076f41a6621a7b51d63a3, type: 3}
+      propertyPath: EmissionModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198638549123606584, guid: a97415c6b57076f41a6621a7b51d63a3, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198657207242325464, guid: a97415c6b57076f41a6621a7b51d63a3, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198783624609233390, guid: a97415c6b57076f41a6621a7b51d63a3, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198823974488788982, guid: a97415c6b57076f41a6621a7b51d63a3, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 199403377841047146, guid: a97415c6b57076f41a6621a7b51d63a3, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 199427142310466126, guid: a97415c6b57076f41a6621a7b51d63a3, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 199519982372565720, guid: a97415c6b57076f41a6621a7b51d63a3, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 199697072254137404, guid: a97415c6b57076f41a6621a7b51d63a3, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 199963095999613462, guid: a97415c6b57076f41a6621a7b51d63a3, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114338152808881736, guid: a97415c6b57076f41a6621a7b51d63a3, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a97415c6b57076f41a6621a7b51d63a3, type: 3}
+--- !u!198 &1228388709 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 198330214428362902, guid: a97415c6b57076f41a6621a7b51d63a3, type: 3}
+  m_PrefabInstance: {fileID: 1228388708}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1228388710 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4865807609286998, guid: a97415c6b57076f41a6621a7b51d63a3, type: 3}
+  m_PrefabInstance: {fileID: 1228388708}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1251751431
 GameObject:
   m_ObjectHideFlags: 0
@@ -16430,7 +16567,6 @@ GameObject:
   - component: {fileID: 1527130339}
   - component: {fileID: 1527130342}
   - component: {fileID: 1527130343}
-  - component: {fileID: 1527130344}
   - component: {fileID: 1527130345}
   - component: {fileID: 1527130346}
   - component: {fileID: 1527130348}
@@ -16594,18 +16730,6 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   priority: 0
---- !u!114 &1527130344
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1527130338}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b9e31fdf962e3e4ca3b62ec3ecc2f4e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1527130345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17542,6 +17666,8 @@ MonoBehaviour:
   mineralDataSO: {fileID: 11400000, guid: 60e958e2f52538b48b3be49a6a044a35, type: 2}
   dustParticleGo: {fileID: 353352830}
   gloomParticleGo: {fileID: 142958282}
+  pickUpParticleEffect: {fileID: 0}
+  mineralDestroyDelay: 1
 --- !u!54 &1632609726
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -20275,6 +20401,8 @@ MonoBehaviour:
   mineralDataSO: {fileID: 11400000, guid: 1ad2074b21bbf4b438739dc253f84ddf, type: 2}
   dustParticleGo: {fileID: 1518239874}
   gloomParticleGo: {fileID: 2033271354}
+  pickUpParticleEffect: {fileID: 0}
+  mineralDestroyDelay: 1
 --- !u!54 &1998523974
 Rigidbody:
   m_ObjectHideFlags: 0

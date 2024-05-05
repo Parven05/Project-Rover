@@ -1,4 +1,5 @@
 using StarterAssets;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -71,5 +72,10 @@ public class SolarPanelUi : MonoBehaviour
                 solarBarImageList[i].enabled = true;
             }
         }
+    }
+
+    internal void AddPower(object value)
+    {
+        throw new NotImplementedException();
     }
 }

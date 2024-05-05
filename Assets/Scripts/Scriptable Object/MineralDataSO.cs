@@ -16,8 +16,6 @@ public class MineralDataSO : ScriptableObject
     [Header("Mineral References")]
     public Sprite mineralSprite;
     public GameObject mineralPrefab;
-    public ParticleSystem mineralPickParticle;
-    public float pickUpDestroyDelay = 1f;
 
     public enum MineralWeight { Less, Medium, Heavy };
     public enum MineralSize { Small, Medium, Large };
