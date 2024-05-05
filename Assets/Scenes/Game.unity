@@ -9328,7 +9328,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1.966, y: 1.509}
+  m_AnchoredPosition: {x: 0.09099996, y: 3.0714998}
   m_SizeDelta: {x: 100, y: 35.917}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &416548072
@@ -17834,7 +17834,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   solarPanel: {fileID: 609576372}
-  chargingSpeed: 0.3
+  chargingSpeed: 2
 --- !u!54 &1538622778
 Rigidbody:
   m_ObjectHideFlags: 0
