@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class MineralDeliveryArea : MonoBehaviour
@@ -34,6 +35,7 @@ public class MineralDeliveryArea : MonoBehaviour
             OnMineralListModified?.Invoke(collectedMineralSoList);
 
             RoverPocketStorage.Instance.SetPickedMineral(null);
+
         }
     }
 

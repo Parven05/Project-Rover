@@ -1,5 +1,7 @@
 using StarterAssets;
 using System.Collections;
+using System.Runtime.CompilerServices;
+using TMPro;
 using UnityEngine;
 
 public class Mineral : MonoBehaviour
@@ -9,6 +11,8 @@ public class Mineral : MonoBehaviour
     [SerializeField] private GameObject dustParticleGo;
     [SerializeField] private GameObject gloomParticleGo;
     [SerializeField] private Material dissolveMaterial;
+
+    [SerializeField] private TextMeshProUGUI mineralFormulaText;
 
     [Space]
     [SerializeField] private float mineralDestroyDelay = 1f;
@@ -36,6 +40,9 @@ public class Mineral : MonoBehaviour
             isDissolving = true;
             sliceAmount = 0f;
             StartCoroutine(Dissolve());
+
+            // Access formula text & convert into UI in game
+            mineralFormulaText.text = mineralDataSO.mineralFormula;
 
             // Remove this mineral from the manager
             MineralsFxManager.Instance.RemoveMineral(this);

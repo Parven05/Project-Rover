@@ -19,7 +19,6 @@ MonoBehaviour:
   mineralColor: 0
   mineralWeight: 0
   mineralSize: 0
+  mineralFormula: Do2
   mineralSprite: {fileID: 0}
   mineralPrefab: {fileID: 0}
-  mineralPickParticle: {fileID: 198330214428362902, guid: a97415c6b57076f41a6621a7b51d63a3, type: 3}
-  pickUpDestroyDelay: 1

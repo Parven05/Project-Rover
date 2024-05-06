@@ -14,6 +14,7 @@ public class MineralDataSO : ScriptableObject
     public MineralSize mineralSize;
 
     [Header("Mineral References")]
+    public string mineralFormula;
     public Sprite mineralSprite;
     public GameObject mineralPrefab;
 
