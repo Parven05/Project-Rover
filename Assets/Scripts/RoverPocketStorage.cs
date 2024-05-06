@@ -1,8 +1,11 @@
+using System;
 using UnityEngine;
 
 public class RoverPocketStorage : MonoBehaviour
 {
     public static RoverPocketStorage Instance { get; private set; }
+
+    public event Action<MineralDataSO> OnPocketStorageModified;
 
     private MineralDataSO pickedMineralDataSO;
 
@@ -14,6 +17,8 @@ public class RoverPocketStorage : MonoBehaviour
     public void SetPickedMineral(MineralDataSO pickedMineralDataSO)
     {
         this.pickedMineralDataSO = pickedMineralDataSO;
+
+        OnPocketStorageModified?.Invoke(pickedMineralDataSO);
     }
 
     public MineralDataSO GetPickedMineralDataSO()

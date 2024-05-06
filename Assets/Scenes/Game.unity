@@ -4035,6 +4035,122 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: 2ca7d85b356a0b143bb417b28b61b47d, type: 2}
+--- !u!1 &109042487
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 109042491}
+  - component: {fileID: 109042490}
+  - component: {fileID: 109042489}
+  - component: {fileID: 109042488}
+  - component: {fileID: 109042492}
+  m_Layer: 5
+  m_Name: Canvas_Interactor UI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &109042488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109042487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &109042489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109042487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0.5
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &109042490
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109042487}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &109042491
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109042487}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1633865666}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &109042492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109042487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c48f4b0d594aa7489e8cc97f01cfe63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionImage: {fileID: 1633865667}
 --- !u!1 &121114452
 GameObject:
   m_ObjectHideFlags: 0
@@ -11150,7 +11266,7 @@ PrefabInstance:
     - target: {fileID: 1939196544723556580, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 192fd0776f134f34b986e59726d037a5, type: 2}
+      objectReference: {fileID: 2100000, guid: e8bedb343a984bee5985070ea57c0cb0, type: 2}
     - target: {fileID: 2322950120243684502, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.4
@@ -11217,7 +11333,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7520009031373468885, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7520009031373468885, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -11239,6 +11355,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7520009031373468885, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 619399504}
+    - targetCorrespondingSourceObject: {fileID: 7520009031373468885, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 619399508}
   m_SourcePrefab: {fileID: 100100000, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
 --- !u!1 &619399494 stripped
 GameObject:
@@ -11265,8 +11384,6 @@ MonoBehaviour:
   mineralDataSO: {fileID: 11400000, guid: 734432fae24e2a74db5973ccd8236322, type: 2}
   dustParticleGo: {fileID: 1143643414}
   gloomParticleGo: {fileID: 938348660}
-  dissolveMaterial: {fileID: 2100000, guid: 192fd0776f134f34b986e59726d037a5, type: 2}
-  mineralFormulaText: {fileID: 33638574}
   mineralDestroyDelay: 5
 --- !u!54 &619399504
 Rigidbody:
@@ -11316,6 +11433,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.46208, y: 1, z: 2.0521085}
   m_Center: {x: -0.042214572, y: 0.20042188, z: 0.06846288}
+--- !u!114 &619399508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619399494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f76530dd94695c408978666c7cc16f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dissolveMaterial: {fileID: 2100000, guid: 192fd0776f134f34b986e59726d037a5, type: 2}
+  dissolveSpeed: 0.5
+  dissolveTarget: 1
 --- !u!1001 &624743684
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11968,8 +12100,6 @@ MonoBehaviour:
   mineralDataSO: {fileID: 11400000, guid: d3615ad38fff6cb4899a46680b10d4a4, type: 2}
   dustParticleGo: {fileID: 2002751053}
   gloomParticleGo: {fileID: 273376618}
-  dissolveMaterial: {fileID: 2100000, guid: fdc94413d2c96af40b883a9bb0abeb47, type: 2}
-  mineralFormulaText: {fileID: 33638574}
   mineralDestroyDelay: 5
 --- !u!4 &713210672 stripped
 Transform:
@@ -12024,6 +12154,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &713210681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 713210663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f76530dd94695c408978666c7cc16f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dissolveMaterial: {fileID: 2100000, guid: fdc94413d2c96af40b883a9bb0abeb47, type: 2}
+  dissolveSpeed: 0.5
+  dissolveTarget: 1
 --- !u!4 &732860883 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5973382968806590831, guid: 3fe70aec4b849f965ad4d16fcf006123, type: 3}
@@ -12344,7 +12489,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &781188972
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12848,6 +12993,7 @@ GameObject:
   - component: {fileID: 844338637}
   - component: {fileID: 844338644}
   - component: {fileID: 844338645}
+  - component: {fileID: 844338646}
   m_Layer: 8
   m_Name: Rover
   m_TagString: Player
@@ -12892,6 +13038,7 @@ MonoBehaviour:
   look: {x: 0, y: 0}
   jump: 0
   sprint: 0
+  interaction: 1
   analogMovement: 0
   cursorLocked: 1
   cursorInputForLook: 1
@@ -12922,9 +13069,9 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 844338641}
+      - m_Target: {fileID: 844338638}
         m_TargetAssemblyTypeName: 
-        m_MethodName: InputMove
+        m_MethodName: 
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12970,10 +13117,10 @@ MonoBehaviour:
     m_ActionName: Player/Jump[/Keyboard/space,/XInputControllerWindows/buttonSouth]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 844338641}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: InputSprint
-        m_Mode: 0
+      - m_Target: {fileID: 844338646}
+        m_TargetAssemblyTypeName: Interactor, Assembly-CSharp
+        m_MethodName: OnInteraction
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -12986,8 +13133,8 @@ MonoBehaviour:
     m_ActionName: Player/Sprint[/Keyboard/leftShift,/XInputControllerWindows/leftTrigger]
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: e4ce1614-c754-48c1-9103-33130441661f
-    m_ActionName: UI/New action
+    m_ActionId: c066d969-d292-441d-bc09-854a084f6ddc
+    m_ActionName: Player/Interaction[/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -13112,6 +13259,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 904230811f51b0c47b7edfd8b4545340, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &844338646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 844338636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22e615abde23e5745bf276c13b4f35c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inetractionLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  interactionRadius: 5
+  interactorUi: {fileID: 109042492}
 --- !u!1001 &844987124
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13608,50 +13772,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &963053397
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 963053399}
-  - component: {fileID: 963053398}
-  m_Layer: 0
-  m_Name: FPS Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &963053398
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 963053397}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 013e50f29eaafe34dbd49f48f163c1ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &963053399
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 963053397}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2140233576}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &963660678
 PrefabInstance:
@@ -14644,7 +14764,7 @@ PrefabInstance:
     - target: {fileID: 1939196544723556580, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 64e6486a5bed88841a8c0eeddf37b0ef, type: 2}
+      objectReference: {fileID: 2100000, guid: e8bedb343a984bee5985070ea57c0cb0, type: 2}
     - target: {fileID: 2322950120243684502, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.4
@@ -14711,7 +14831,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7520009031373468885, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7520009031373468885, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -14733,6 +14853,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7520009031373468885, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1075288812}
+    - targetCorrespondingSourceObject: {fileID: 7520009031373468885, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1075288816}
   m_SourcePrefab: {fileID: 100100000, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
 --- !u!1 &1075288802 stripped
 GameObject:
@@ -14759,8 +14882,6 @@ MonoBehaviour:
   mineralDataSO: {fileID: 11400000, guid: c33d25097aab2084789955048298a110, type: 2}
   dustParticleGo: {fileID: 384321789}
   gloomParticleGo: {fileID: 189084765}
-  dissolveMaterial: {fileID: 2100000, guid: 64e6486a5bed88841a8c0eeddf37b0ef, type: 2}
-  mineralFormulaText: {fileID: 33638574}
   mineralDestroyDelay: 5
 --- !u!65 &1075288812
 BoxCollider:
@@ -14810,6 +14931,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1075288816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1075288802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f76530dd94695c408978666c7cc16f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dissolveMaterial: {fileID: 2100000, guid: fdc94413d2c96af40b883a9bb0abeb47, type: 2}
+  dissolveSpeed: 0.5
+  dissolveTarget: 1
 --- !u!1 &1078075631
 GameObject:
   m_ObjectHideFlags: 0
@@ -16789,7 +16925,15 @@ PrefabInstance:
     m_TransformParent: {fileID: 883335010}
     m_Modifications:
     - target: {fileID: 1939196544723556580, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1939196544723556580, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
       propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e8bedb343a984bee5985070ea57c0cb0, type: 2}
+    - target: {fileID: 1939196544723556580, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
+      propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: fdc94413d2c96af40b883a9bb0abeb47, type: 2}
     - target: {fileID: 2322950120243684502, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
@@ -16858,7 +17002,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7520009031373468885, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7520009031373468885, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -16880,6 +17024,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7520009031373468885, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 713210678}
+    - targetCorrespondingSourceObject: {fileID: 7520009031373468885, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 713210681}
   m_SourcePrefab: {fileID: 100100000, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
 --- !u!4 &1359080278 stripped
 Transform:
@@ -17811,6 +17958,7 @@ MonoBehaviour:
   look: {x: 0, y: 0}
   jump: 0
   sprint: 0
+  interaction: 0
   analogMovement: 0
   cursorLocked: 1
   cursorInputForLook: 1
@@ -18549,8 +18697,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1619238266}
+  - component: {fileID: 1619238267}
   m_Layer: 5
-  m_Name: Mineral
+  m_Name: Mineral Formula Ui
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18577,6 +18726,19 @@ RectTransform:
   m_AnchoredPosition: {x: 166.5, y: -160.39}
   m_SizeDelta: {x: 0, y: 31.02}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1619238267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619238265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89b2c3d82125a4a488603efb44ced84c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mineralFormulaText: {fileID: 33638574}
 --- !u!1 &1621953205
 GameObject:
   m_ObjectHideFlags: 0
@@ -18643,7 +18805,7 @@ PrefabInstance:
     - target: {fileID: 1939196544723556580, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: a9a7e26f881ad3d42b4725c9af11437c, type: 2}
+      objectReference: {fileID: 2100000, guid: e8bedb343a984bee5985070ea57c0cb0, type: 2}
     - target: {fileID: 2322950120243684502, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.4
@@ -18710,7 +18872,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7520009031373468885, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7520009031373468885, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -18732,6 +18894,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7520009031373468885, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1632609726}
+    - targetCorrespondingSourceObject: {fileID: 7520009031373468885, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1632609730}
   m_SourcePrefab: {fileID: 100100000, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
 --- !u!1 &1632609716 stripped
 GameObject:
@@ -18758,8 +18923,6 @@ MonoBehaviour:
   mineralDataSO: {fileID: 11400000, guid: 60e958e2f52538b48b3be49a6a044a35, type: 2}
   dustParticleGo: {fileID: 353352830}
   gloomParticleGo: {fileID: 142958282}
-  dissolveMaterial: {fileID: 2100000, guid: a9a7e26f881ad3d42b4725c9af11437c, type: 2}
-  mineralFormulaText: {fileID: 33638574}
   mineralDestroyDelay: 5
 --- !u!54 &1632609726
 Rigidbody:
@@ -18809,6 +18972,96 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.46208, y: 1, z: 2.0521085}
   m_Center: {x: -0.042210758, y: 0.20042284, z: 0.06846288}
+--- !u!114 &1632609730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632609716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f76530dd94695c408978666c7cc16f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dissolveMaterial: {fileID: 2100000, guid: a9a7e26f881ad3d42b4725c9af11437c, type: 2}
+  dissolveSpeed: 0.5
+  dissolveTarget: 1
+--- !u!1 &1633865665
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1633865666}
+  - component: {fileID: 1633865668}
+  - component: {fileID: 1633865667}
+  m_Layer: 5
+  m_Name: Inetact Icon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1633865666
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633865665}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 109042491}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 868, y: -252}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1633865667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633865665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300068, guid: 7ab74e659e1f0a34d9cfec21c478fc12, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1633865668
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633865665}
+  m_CullTransparentMesh: 1
 --- !u!1 &1639813778
 GameObject:
   m_ObjectHideFlags: 0
@@ -21390,7 +21643,7 @@ PrefabInstance:
     - target: {fileID: 1939196544723556580, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: c9a28ba500b51b2419fbc8ba6c357d8a, type: 2}
+      objectReference: {fileID: 2100000, guid: e8bedb343a984bee5985070ea57c0cb0, type: 2}
     - target: {fileID: 2322950120243684502, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.4
@@ -21457,7 +21710,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7520009031373468885, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7520009031373468885, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -21479,6 +21732,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7520009031373468885, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1998523974}
+    - targetCorrespondingSourceObject: {fileID: 7520009031373468885, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1998523978}
   m_SourcePrefab: {fileID: 100100000, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
 --- !u!1 &1998523964 stripped
 GameObject:
@@ -21505,8 +21761,6 @@ MonoBehaviour:
   mineralDataSO: {fileID: 11400000, guid: 1ad2074b21bbf4b438739dc253f84ddf, type: 2}
   dustParticleGo: {fileID: 1518239874}
   gloomParticleGo: {fileID: 2033271354}
-  dissolveMaterial: {fileID: 2100000, guid: c9a28ba500b51b2419fbc8ba6c357d8a, type: 2}
-  mineralFormulaText: {fileID: 33638574}
   mineralDestroyDelay: 5
 --- !u!54 &1998523974
 Rigidbody:
@@ -21556,6 +21810,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.46208, y: 1.173085, z: 2.0521085}
   m_Center: {x: -0.042210817, y: 0.10542333, z: 0.0684648}
+--- !u!114 &1998523978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998523964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f76530dd94695c408978666c7cc16f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dissolveMaterial: {fileID: 2100000, guid: fdc94413d2c96af40b883a9bb0abeb47, type: 2}
+  dissolveSpeed: 0.5
+  dissolveTarget: 1
 --- !u!1 &2002751053 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: f89732ea99785b94c87bbba1e27f75a3, type: 3}
@@ -21573,7 +21842,7 @@ GameObject:
   - component: {fileID: 2010906854}
   - component: {fileID: 2010906853}
   - component: {fileID: 2010906855}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mineral Delivery Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26835,7 +27104,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1536823107}
-  - {fileID: 963053399}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2142155202
@@ -27640,6 +27908,7 @@ MonoBehaviour:
   look: {x: 0, y: 0}
   jump: 0
   sprint: 0
+  interaction: 0
   analogMovement: 0
   cursorLocked: 1
   cursorInputForLook: 1
@@ -28281,3 +28550,4 @@ SceneRoots:
   - {fileID: 1722126567}
   - {fileID: 959561903}
   - {fileID: 1167187407}
+  - {fileID: 109042491}

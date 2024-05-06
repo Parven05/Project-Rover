@@ -1,9 +1,8 @@
 using System;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
-public class MineralDeliveryArea : MonoBehaviour
+public class MineralDeliveryArea : MonoBehaviour,IInteractable
 {
     public static MineralDeliveryArea Instance { get; private set; }
 
@@ -18,14 +17,23 @@ public class MineralDeliveryArea : MonoBehaviour
         Instance = this;
     }
 
-    private void OnTriggerEnter(Collider other)
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.gameObject.TryGetComponent(out Rover _))
+    //    {
+           
+    //    }
+    //}
+
+    public int GetTotalCollectableMineralsCount()
     {
-        if (other.gameObject.TryGetComponent(out Rover _))
-        {
-            HandleCollectMineral();
-        }
+       return toCollectMineralSoList.Count;
     }
 
+    public void Interact()
+    {
+        HandleCollectMineral();
+    }
     private void HandleCollectMineral()
     {
         if (RoverPocketStorage.Instance.IsHoldingMineral())
@@ -37,10 +45,5 @@ public class MineralDeliveryArea : MonoBehaviour
             RoverPocketStorage.Instance.SetPickedMineral(null);
 
         }
-    }
-
-    public int GetTotalCollectableMineralsCount()
-    {
-       return toCollectMineralSoList.Count;
     }
 }
