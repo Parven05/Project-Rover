@@ -273,11 +273,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4865807609286998, guid: a97415c6b57076f41a6621a7b51d63a3, type: 3}
   m_PrefabInstance: {fileID: 50480170}
   m_PrefabAsset: {fileID: 0}
---- !u!198 &50480172 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 198330214428362902, guid: a97415c6b57076f41a6621a7b51d63a3, type: 3}
-  m_PrefabInstance: {fileID: 50480170}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &54213970
 GameObject:
   m_ObjectHideFlags: 0
@@ -10644,11 +10639,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4865807609286998, guid: a97415c6b57076f41a6621a7b51d63a3, type: 3}
   m_PrefabInstance: {fileID: 603515178}
   m_PrefabAsset: {fileID: 0}
---- !u!198 &603515180 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 198330214428362902, guid: a97415c6b57076f41a6621a7b51d63a3, type: 3}
-  m_PrefabInstance: {fileID: 603515178}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &605306739 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2958719484651492955, guid: 304c10260d61b21a6ba58e09b70d0286, type: 3}
@@ -10859,6 +10849,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 883335010}
     m_Modifications:
+    - target: {fileID: 1939196544723556580, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 192fd0776f134f34b986e59726d037a5, type: 2}
     - target: {fileID: 2322950120243684502, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.4
@@ -10921,7 +10915,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7520009031373468885, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
       propertyPath: m_Name
-      value: Mineral (4)
+      value: Mineral 5
       objectReference: {fileID: 0}
     - target: {fileID: 7520009031373468885, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
       propertyPath: m_Layer
@@ -10973,8 +10967,8 @@ MonoBehaviour:
   mineralDataSO: {fileID: 11400000, guid: 734432fae24e2a74db5973ccd8236322, type: 2}
   dustParticleGo: {fileID: 1143643414}
   gloomParticleGo: {fileID: 938348660}
-  pickUpParticleEffect: {fileID: 50480172}
-  mineralDestroyDelay: 1
+  dissolveMaterial: {fileID: 2100000, guid: 192fd0776f134f34b986e59726d037a5, type: 2}
+  mineralDestroyDelay: 5
 --- !u!54 &619399504
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11675,8 +11669,8 @@ MonoBehaviour:
   mineralDataSO: {fileID: 11400000, guid: d3615ad38fff6cb4899a46680b10d4a4, type: 2}
   dustParticleGo: {fileID: 2002751053}
   gloomParticleGo: {fileID: 273376618}
-  pickUpParticleEffect: {fileID: 1228388709}
-  mineralDestroyDelay: 1
+  dissolveMaterial: {fileID: 2100000, guid: fdc94413d2c96af40b883a9bb0abeb47, type: 2}
+  mineralDestroyDelay: 5
 --- !u!4 &713210672 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2322950120243684502, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
@@ -14272,6 +14266,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 883335010}
     m_Modifications:
+    - target: {fileID: 1939196544723556580, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 64e6486a5bed88841a8c0eeddf37b0ef, type: 2}
     - target: {fileID: 2322950120243684502, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.4
@@ -14334,7 +14332,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7520009031373468885, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
       propertyPath: m_Name
-      value: Mineral (1)
+      value: Mineral 2
       objectReference: {fileID: 0}
     - target: {fileID: 7520009031373468885, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
       propertyPath: m_Layer
@@ -14386,8 +14384,8 @@ MonoBehaviour:
   mineralDataSO: {fileID: 11400000, guid: c33d25097aab2084789955048298a110, type: 2}
   dustParticleGo: {fileID: 384321789}
   gloomParticleGo: {fileID: 189084765}
-  pickUpParticleEffect: {fileID: 1239284031}
-  mineralDestroyDelay: 1
+  dissolveMaterial: {fileID: 2100000, guid: 64e6486a5bed88841a8c0eeddf37b0ef, type: 2}
+  mineralDestroyDelay: 5
 --- !u!65 &1075288812
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14647,11 +14645,6 @@ PrefabInstance:
 --- !u!4 &1115759997 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4865807609286998, guid: a97415c6b57076f41a6621a7b51d63a3, type: 3}
-  m_PrefabInstance: {fileID: 1115759996}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &1115759998 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 198330214428362902, guid: a97415c6b57076f41a6621a7b51d63a3, type: 3}
   m_PrefabInstance: {fileID: 1115759996}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1128908508
@@ -15836,11 +15829,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a97415c6b57076f41a6621a7b51d63a3, type: 3}
---- !u!198 &1228388709 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 198330214428362902, guid: a97415c6b57076f41a6621a7b51d63a3, type: 3}
-  m_PrefabInstance: {fileID: 1228388708}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1228388710 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4865807609286998, guid: a97415c6b57076f41a6621a7b51d63a3, type: 3}
@@ -15955,11 +15943,6 @@ PrefabInstance:
 --- !u!4 &1239284030 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4865807609286998, guid: a97415c6b57076f41a6621a7b51d63a3, type: 3}
-  m_PrefabInstance: {fileID: 1239284029}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &1239284031 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 198330214428362902, guid: a97415c6b57076f41a6621a7b51d63a3, type: 3}
   m_PrefabInstance: {fileID: 1239284029}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1251751431
@@ -16393,7 +16376,7 @@ PrefabInstance:
     - target: {fileID: 1939196544723556580, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: aa28ebffc75ac3c6f94389380da62100, type: 2}
+      objectReference: {fileID: 2100000, guid: fdc94413d2c96af40b883a9bb0abeb47, type: 2}
     - target: {fileID: 2322950120243684502, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.4
@@ -16456,7 +16439,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7520009031373468885, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
       propertyPath: m_Name
-      value: Mineral
+      value: Mineral 1
       objectReference: {fileID: 0}
     - target: {fileID: 7520009031373468885, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
       propertyPath: m_Layer
@@ -18205,6 +18188,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 883335010}
     m_Modifications:
+    - target: {fileID: 1939196544723556580, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a9a7e26f881ad3d42b4725c9af11437c, type: 2}
     - target: {fileID: 2322950120243684502, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.4
@@ -18219,15 +18206,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2322950120243684502, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -2.33
       objectReference: {fileID: 0}
     - target: {fileID: 2322950120243684502, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.875
+      value: -2.4
       objectReference: {fileID: 0}
     - target: {fileID: 2322950120243684502, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 5.56
       objectReference: {fileID: 0}
     - target: {fileID: 2322950120243684502, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -18267,7 +18254,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7520009031373468885, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
       propertyPath: m_Name
-      value: Mineral (3)
+      value: Mineral 4
       objectReference: {fileID: 0}
     - target: {fileID: 7520009031373468885, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
       propertyPath: m_Layer
@@ -18319,8 +18306,8 @@ MonoBehaviour:
   mineralDataSO: {fileID: 11400000, guid: 60e958e2f52538b48b3be49a6a044a35, type: 2}
   dustParticleGo: {fileID: 353352830}
   gloomParticleGo: {fileID: 142958282}
-  pickUpParticleEffect: {fileID: 1115759998}
-  mineralDestroyDelay: 1
+  dissolveMaterial: {fileID: 2100000, guid: a9a7e26f881ad3d42b4725c9af11437c, type: 2}
+  mineralDestroyDelay: 5
 --- !u!54 &1632609726
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -20940,6 +20927,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 883335010}
     m_Modifications:
+    - target: {fileID: 1939196544723556580, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c9a28ba500b51b2419fbc8ba6c357d8a, type: 2}
     - target: {fileID: 2322950120243684502, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.4
@@ -21002,7 +20993,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7520009031373468885, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
       propertyPath: m_Name
-      value: Mineral (2)
+      value: Mineral 3
       objectReference: {fileID: 0}
     - target: {fileID: 7520009031373468885, guid: 3fdc0869a29be042a8bfb2df8274d10c, type: 3}
       propertyPath: m_Layer
@@ -21054,8 +21045,8 @@ MonoBehaviour:
   mineralDataSO: {fileID: 11400000, guid: 1ad2074b21bbf4b438739dc253f84ddf, type: 2}
   dustParticleGo: {fileID: 1518239874}
   gloomParticleGo: {fileID: 2033271354}
-  pickUpParticleEffect: {fileID: 603515180}
-  mineralDestroyDelay: 1
+  dissolveMaterial: {fileID: 2100000, guid: c9a28ba500b51b2419fbc8ba6c357d8a, type: 2}
+  mineralDestroyDelay: 5
 --- !u!54 &1998523974
 Rigidbody:
   m_ObjectHideFlags: 0
