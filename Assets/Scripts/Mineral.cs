@@ -38,6 +38,8 @@ public class Mineral : MonoBehaviour,IInteractable
 
     private void OnDestroy()
     {
+        SoundManager.Instance.PlayClipAtPosition("Pick_SFX",transform.position);
+
         RoverPocketStorage.Instance.SetPickedMineral(mineralDataSO);
     }
 }
