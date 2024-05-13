@@ -39,7 +39,7 @@ Material:
     m_Floats:
     - _BurnSize: 0.15
     - _EmissionAmount: 2
-    - _SliceAmount: 0.9216172
+    - _SliceAmount: 0
     m_Colors:
     - _BurnColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
