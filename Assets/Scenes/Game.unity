@@ -9206,6 +9206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 200
+  headBounceAnim: {fileID: 0}
   thirdPersonController: {fileID: 1925873226397510338}
 --- !u!23 &316108962
 MeshRenderer:
@@ -9280,6 +9281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 200
+  headBounceAnim: {fileID: 8989944755462259513}
   thirdPersonController: {fileID: 844338641}
 --- !u!1 &353352830 stripped
 GameObject:
@@ -27463,7 +27465,7 @@ Transform:
   m_GameObject: {fileID: 919132149365079967}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.006249845, y: 0.94624877, z: -0.052499995}
+  m_LocalPosition: {x: 0.006249845, y: 0.921, z: -0.052499995}
   m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -28301,6 +28303,7 @@ GameObject:
   - component: {fileID: 8989944755462259512}
   - component: {fileID: 5842884833412577539}
   - component: {fileID: 2555149746164873442}
+  - component: {fileID: 8989944755462259513}
   m_Layer: 0
   m_Name: HEAD
   m_TagString: Untagged
@@ -28544,6 +28547,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1223728199}
   m_LocalEulerAnglesHint: {x: -6.11, y: 0, z: 0}
+--- !u!95 &8989944755462259513
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6149066099995624367}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9a69604dd9c3efa4eace6b58bfe5af4a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &9179547595045604509
 Transform:
   m_ObjectHideFlags: 0
