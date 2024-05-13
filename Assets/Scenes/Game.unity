@@ -13248,9 +13248,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 844338636}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e89a566515d190949b3da33aad486d98, type: 3}
+  m_Script: {fileID: 11500000, guid: dc789290642a34d41aecfae9d3fd6719, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dustParticles: {fileID: 2011220924}
 --- !u!114 &844338645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22087,6 +22088,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1ad2074b21bbf4b438739dc253f84ddf, type: 2}
   - {fileID: 11400000, guid: 60e958e2f52538b48b3be49a6a044a35, type: 2}
   - {fileID: 11400000, guid: 734432fae24e2a74db5973ccd8236322, type: 2}
+--- !u!198 &2011220924 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1093851015944718352, guid: 6850ae5fc6c7ccd4983848552a653849, type: 3}
+  m_PrefabInstance: {fileID: 37807124109049367}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2020582902
 GameObject:
   m_ObjectHideFlags: 0
@@ -27541,9 +27547,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 844338643}
     m_Modifications:
+    - target: {fileID: 1093851015944718352, guid: 6850ae5fc6c7ccd4983848552a653849, type: 3}
+      propertyPath: simulationSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1455511046390971541, guid: 6850ae5fc6c7ccd4983848552a653849, type: 3}
       propertyPath: m_Name
       value: Dust Particle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455511046390971541, guid: 6850ae5fc6c7ccd4983848552a653849, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8427695552527706107, guid: 6850ae5fc6c7ccd4983848552a653849, type: 3}
       propertyPath: m_LocalPosition.x

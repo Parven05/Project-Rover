@@ -7,7 +7,7 @@ public class ChargingSystem : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if(other.gameObject.TryGetComponent(out Rover _))
+        if(other.gameObject.TryGetComponent(out RoverVisuals _))
         {
             solarPanel.AddPower(Time.deltaTime * chargingSpeed);
         }
