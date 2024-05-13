@@ -18263,7 +18263,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 63eeb89b31e5f994c970e72c0abf167b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 6edafbd4d70ae2f4f9185e4fa6f4a4f3, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.2
   m_Pitch: 1
@@ -27548,8 +27548,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 844338643}
     m_Modifications:
     - target: {fileID: 1093851015944718352, guid: 6850ae5fc6c7ccd4983848552a653849, type: 3}
+      propertyPath: lengthInSec
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093851015944718352, guid: 6850ae5fc6c7ccd4983848552a653849, type: 3}
       propertyPath: simulationSpeed
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093851015944718352, guid: 6850ae5fc6c7ccd4983848552a653849, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093851015944718352, guid: 6850ae5fc6c7ccd4983848552a653849, type: 3}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 1455511046390971541, guid: 6850ae5fc6c7ccd4983848552a653849, type: 3}
       propertyPath: m_Name
