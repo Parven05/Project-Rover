@@ -5,11 +5,29 @@ using UnityEngine;
 public class SoundDataSO : ScriptableObject
 {
     public List<ClipData> clipDataList;
+}
 
-    [System.Serializable]
-    public class ClipData
-    {
-        public string AudioClipName;
-        public AudioClip AudioClip;
-    }
+[System.Serializable]
+public class ClipData
+{
+    public SoundName SoundName;
+    public SoundType SoundType;
+    public bool Loopable;
+    public bool PlayOnAwake;
+    public AudioClip AudioClip;
+    [HideInInspector]
+    public AudioSource AudioSource;
+}
+
+public enum SoundName
+{
+    PickEffect,
+    Stereo_Surgion
+    //More Names
+}
+
+public enum SoundType
+{
+    Sfx,
+    Music
 }

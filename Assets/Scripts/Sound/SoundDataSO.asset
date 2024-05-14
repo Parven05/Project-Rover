@@ -13,13 +13,33 @@ MonoBehaviour:
   m_Name: SoundDataSO
   m_EditorClassIdentifier: 
   clipDataList:
-  - AudioClipName: Pick_SFX
+  - SoundName: 0
+    SoundType: 0
+    Loopable: 0
+    PlayOnAwake: 0
     AudioClip: {fileID: 8300000, guid: 40bbf4834c294854bb463f0246a9701e, type: 3}
-  - AudioClipName: 
+    AudioSource: {fileID: 0}
+  - SoundName: 1
+    SoundType: 1
+    Loopable: 0
+    PlayOnAwake: 0
+    AudioClip: {fileID: 8300000, guid: 3c3591a8cd0e4914c81ab92fed513c94, type: 3}
+    AudioSource: {fileID: 0}
+  - SoundName: 0
+    SoundType: 0
+    Loopable: 0
+    PlayOnAwake: 0
     AudioClip: {fileID: 0}
-  - AudioClipName: 
+    AudioSource: {fileID: 0}
+  - SoundName: 0
+    SoundType: 0
+    Loopable: 0
+    PlayOnAwake: 0
     AudioClip: {fileID: 0}
-  - AudioClipName: 
+    AudioSource: {fileID: 0}
+  - SoundName: 0
+    SoundType: 0
+    Loopable: 0
+    PlayOnAwake: 0
     AudioClip: {fileID: 0}
-  - AudioClipName: 
-    AudioClip: {fileID: 0}
+    AudioSource: {fileID: 0}
