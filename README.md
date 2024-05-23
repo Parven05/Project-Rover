@@ -1,2 +1,2 @@
-# Project-Planet
+# Project-Rover
 One Week Exploration Game
