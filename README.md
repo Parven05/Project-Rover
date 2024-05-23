@@ -1,2 +1,2 @@
 # Project-Rover
-One Week Exploration Game
+Art-focused Exploration Game
