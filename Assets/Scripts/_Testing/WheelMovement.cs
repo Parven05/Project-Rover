@@ -42,7 +42,7 @@ public class WheelMovement : MonoBehaviour
         // If No Input From Player Means Stop Rover
         if(moveDirection.x == 0 && moveDirection.z == 0)
         {
-            rb.velocity = Vector3.Lerp(rb.velocity,Vector3.zero,stopDelay);
+            rb.linearVelocity = Vector3.Lerp(rb.linearVelocity,Vector3.zero,stopDelay);
         }
 
         if (head != null)
@@ -54,6 +54,6 @@ public class WheelMovement : MonoBehaviour
 
     public bool IsRoverMoving()
     {
-        return rb.velocity.x > minVelocity.x || rb.velocity.y > minVelocity.y || rb.velocity.z > minVelocity.z;
+        return rb.linearVelocity.x > minVelocity.x || rb.linearVelocity.y > minVelocity.y || rb.linearVelocity.z > minVelocity.z;
     }
 }
