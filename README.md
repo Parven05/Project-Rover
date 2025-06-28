@@ -7,7 +7,7 @@
 ![rover2](https://github.com/user-attachments/assets/c49e6356-c67a-4653-82e4-f1027e032122)
 
 This Unity project features a stylized rover scene designed to experiment with **cel shading techniques** and explore the rendering limits of Unity's **Built-in Render Pipeline (BiRP)**.
-It uses the **Stylized Cel Shader (SCS)** by [Symmasolan](https://symmasolan.itch.io/scs), a PBR-lite shader that supports toon-like shading with outline effects and real-time lighting support.
+It uses the **Stylized Cel Shader (SCS)** by [Symmasolan](https://symmasolan.itch.io), a PBR-lite shader that supports toon-like shading with outline effects and real-time lighting support.
 
 ## Features
 
