@@ -6,22 +6,19 @@
 ![rover1](https://github.com/user-attachments/assets/c728232a-8964-4ccf-82de-78be5c0f5182)
 ![rover2](https://github.com/user-attachments/assets/c49e6356-c67a-4653-82e4-f1027e032122)
 
+This Unity project features a stylized rover scene designed to experiment with **cel shading techniques** and explore the rendering limits of Unity's **Built-in Render Pipeline (BiRP)**.
+It uses the **Stylized Cel Shader (SCS)** by [Symmasolan](https://symmasolan.itch.io/scs), a PBR-lite shader that supports toon-like shading with outline effects and real-time lighting support.
 
-## **Introduction:**
-LogicSim is a simple logic gate simulator is developed using Unity and is designed for educational purposes, helping users understand the basics of digital logic circuits.
+## Features
 
-Features:
+- Stylized cel-shaded lighting with support for normal, metallic, and emissive maps  
+- PBR-lite surface options including height, occlusion, and transparency  
+- Basic outline rendering using reverse hull (outline works in Forward rendering mode)  
+- Real-time and baked lighting support via Ambient Spherical Harmonics  
+- Highly customizable per material using LWGUI (clean and user-friendly inspector)
 
-- Drag and drop gates onto the workspace for easy circuit building.
-- Click input/output nodes to draw and connect wires between gates.
-- Supports multiple logic gates like AND, OR, NOT, NAND, NOR, XOR, and XNOR.
-- Interactive inputs/outputs including toggle buttons and RGB indicators.
-- Zoom with right-click scroll and clear all with a single button click.
+## Shader Credit
 
-## **Official Release:**
-Made for Web
+Shader used:  
+[PBR-lite Surface Cel Shader for Unity BiRP](https://symmasolan.itch.io/scs)
 
-[![Itch_Banner](https://github.com/user-attachments/assets/13fecf6b-cca1-44b0-8b63-d69e96809f8b)](https://parven.itch.io/logic-sim)
-
-## **Source:**
-https://github.com/MaximovInk/NodeLogic
