@@ -2,7 +2,7 @@
 ![Engine](https://badgen.net/badge/Engine/Unity/blue)
 ![License](https://badgen.net/badge/license/MIT/green)
 
-## **Cel Shading Stylized Experimental Demo**
+## **Experimental Rover Scene with Cel Shading**
 ![rover1](https://github.com/user-attachments/assets/c728232a-8964-4ccf-82de-78be5c0f5182)
 ![rover2](https://github.com/user-attachments/assets/c49e6356-c67a-4653-82e4-f1027e032122)
 
