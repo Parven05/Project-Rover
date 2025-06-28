@@ -4,7 +4,7 @@
 
 ## **Cel Shading Stylized Experimental Demo**
 ![rover1](https://github.com/user-attachments/assets/c728232a-8964-4ccf-82de-78be5c0f5182)
-![rover2](https://github.com/user-attachments/assets/5c730277-10aa-415d-b3fb-e6048d956ab1)
+![rover2](https://github.com/user-attachments/assets/c49e6356-c67a-4653-82e4-f1027e032122)
 
 
 ## **Introduction:**
